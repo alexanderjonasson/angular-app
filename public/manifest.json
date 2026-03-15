@@ -1,0 +1,10 @@
+{
+  "name": "Warhammer 40K Units Angular",
+  "short_name": "WH40K Angular",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1b1b1b",
+  "theme_color": "#1b1b1b",
+  "orientation": "portrait",
+  "icons": []
+}
