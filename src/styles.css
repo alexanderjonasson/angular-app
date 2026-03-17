@@ -1,61 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1b1b1b;
-  color: #e0e0e0;
-}
+  font-family:
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
 
-.App {
-  text-align: center;
-  padding: 40px 20px;
-}
+  background:
+    radial-gradient(circle at top, rgba(120, 0, 0, 0.18), transparent 28%),
+    linear-gradient(180deg, #0f1012 0%, #15171b 45%, #101114 100%);
 
-h1 {
-  font-size: 2.5rem;
-  color: #d4af37;
-  margin-bottom: 40px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
+  color: #e8e3d6;
 
-ul {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-li {
-  background: linear-gradient(145deg, #222, #2b2b2b);
-  border: 1px solid #333;
-  border-left: 5px solid #8b0000;
-  padding: 20px;
-  border-radius: 8px;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  border-left: 5px solid #d4af37;
-}
-
-li strong {
-  display: block;
-  font-size: 1.2rem;
-  color: #ffffff;
-  margin-bottom: 8px;
-}
-
-li span {
-  color: #ffcc00;
-  font-weight: bold;
-}
-
-p {
-  color: #aaa;
-  font-style: italic;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
