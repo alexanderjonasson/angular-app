@@ -1,5 +1,14 @@
-const CACHE_NAME = 'warhammer-angular-v1';
-const APP_SHELL = ['/', '/index.html', '/manifest.json', '/offline.html'];
+const CACHE_NAME = 'warhammer-angular-v2';
+
+const APP_SHELL = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/offline.html',
+  '/logo192.png',
+  '/logo512.png',
+  '/favicon.ico',
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
@@ -14,7 +23,6 @@ self.addEventListener('activate', (event) => {
           if (key !== CACHE_NAME) {
             return caches.delete(key);
           }
-          return null;
         }),
       ),
     ),
