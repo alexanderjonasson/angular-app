@@ -1,4 +1,4 @@
-const CACHE_NAME = 'warhammer-angular-v2';
+const CACHE_NAME = 'warhammer-angular-v3';
 
 const APP_SHELL = [
   '/',
@@ -8,6 +8,8 @@ const APP_SHELL = [
   '/logo192.png',
   '/logo512.png',
   '/favicon.ico',
+  '/screenshot-wide.png',
+  '/screenshot-mobile.png',
 ];
 
 self.addEventListener('install', (event) => {
@@ -17,15 +19,11 @@ self.addEventListener('install', (event) => {
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(
-        keys.map((key) => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
-        }),
+    caches
+      .keys()
+      .then((keys) =>
+        Promise.all(keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))),
       ),
-    ),
   );
   self.clients.claim();
 });
